@@ -135,6 +135,10 @@ const deleteCar = async (req, res) => {
   }
 };
 
+const testEndpoint = async (req, res) => {
+  return res.status(200).send("Successful req/res");
+}
+
 module.exports = {
   createBrand,
   getAllBrands,
@@ -146,4 +150,5 @@ module.exports = {
   getCarByID,
   updateCar,
   deleteCar,
+  testEndpoint
 };

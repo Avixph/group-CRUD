@@ -26,4 +26,6 @@ router.put("/carModels/:id", controllers.updateCar);
 
 router.delete("/carModels/:id", controllers.deleteCar);
 
+router.get("/test_endpoint", controllers.testEndpoint);
+
 module.exports = router;
