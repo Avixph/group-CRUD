@@ -17,7 +17,7 @@ const CarBrands = () => {
   }, []);
 
   const showBrands = brands.map((brand) => (
-    <li>
+    <li key={brand._id}>
       <NavLink to={`/car-brands/${brand._id}/car-models`}>
         {brand.title}
       </NavLink>
@@ -26,7 +26,7 @@ const CarBrands = () => {
 
   return (
     <Layout>
-      <h4>All Car Brands</h4>
+      <h3>All Car Brands</h3>
       <ul>{showBrands}</ul>
     </Layout>
   );

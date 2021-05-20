@@ -23,7 +23,7 @@ export const getBrands = async () => {
 
 export const getModels = async () => {
   const response = await axios.get(carModelUrl).then(({ data }) => {
-    return data.cars;
+    return data;
   });
   console.log(response);
   return response;
