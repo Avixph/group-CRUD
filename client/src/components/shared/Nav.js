@@ -5,7 +5,7 @@ const Nav = () => {
     <nav>
       <NavLink to="/">Homes</NavLink>
       <NavLink to="/car-brands">Brands</NavLink>
-      <NavLink to="/add-car-brand-or-model">Add a Brand/Model</NavLink>
+      <NavLink to="/add-car-brand-or-model">Add Brand/Model</NavLink>
     </nav>
   );
 };
