@@ -1,4 +1,6 @@
+import Layout from "../../shared/Layout";
+
 const CarBrandEdit = () => {
-  return <div></div>;
+  return <Layout></Layout>;
 };
 export default CarBrandEdit;

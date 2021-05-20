@@ -1,4 +1,6 @@
+import Layout from "../../shared/Layout";
+
 const CarBrandOrModelCreate = () => {
-  return <div></div>;
+  return <Layout></Layout>;
 };
 export default CarBrandOrModelCreate;

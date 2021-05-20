@@ -1,5 +1,7 @@
+import Layout from "../shared/Layout";
+
 const CarModel = () => {
-  return <div></div>;
+  return <Layout></Layout>;
 };
 
 export default CarModel;

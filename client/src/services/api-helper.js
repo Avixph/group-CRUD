@@ -1,15 +1,25 @@
 import axios from "axios";
 
-let carBrandUrl = "https://cargroupcrud.herokuapp.com/api/carBrands";
-let carModelUrl = "https://cargroupcrud.herokuapp.com/api/carModels";
+export const carBrandUrl = "https://cargroupcrud.herokuapp.com/api/carBrands";
+export const carModelUrl = "https://cargroupcrud.herokuapp.com/api/carModels";
 
 export const getBrands = async () => {
   const response = await axios.get(carBrandUrl).then(({ data }) => {
-    return data.brands;
+    return data;
   });
   console.log(response);
   return response;
 };
+
+// export const getOneBrand = async () => {
+//   const response = await axios
+//     .get(`carBrandUrl/609c8aaf2116b17aad5c90bc`)
+//     .then(({ data }) => {
+//       return data;
+//     });
+//   console.log(response);
+//   return response;
+// };
 
 export const getModels = async () => {
   const response = await axios.get(carModelUrl).then(({ data }) => {
