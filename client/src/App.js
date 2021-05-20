@@ -21,16 +21,16 @@ function App() {
       />
       <Route
         exact
-        path="/car-models/:id/edit-car-model"
-        component={CarModelEdit}
-      />
-      <Route
-        exact
         path="/car-brands/:id/edit-car-brand"
         component={CarBrandEdit}
       />
       <Route exact path="/car-brands/:id/car-models" component={CarBrand} />
       <Route exact path="/car-brands/:id/car-models/:id" component={CarModel} />
+      <Route
+        exact
+        path="/car-brands/:id/car-models/:id/edit-car-model"
+        component={CarModelEdit}
+      />
     </div>
   );
 }
