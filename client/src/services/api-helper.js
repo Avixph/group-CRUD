@@ -11,16 +11,6 @@ export const getBrands = async () => {
   return response;
 };
 
-// export const getOneBrand = async () => {
-//   const response = await axios
-//     .get(`carBrandUrl/609c8aaf2116b17aad5c90bc`)
-//     .then(({ data }) => {
-//       return data;
-//     });
-//   console.log(response);
-//   return response;
-// };
-
 export const getModels = async () => {
   const response = await axios.get(carModelUrl).then(({ data }) => {
     return data;

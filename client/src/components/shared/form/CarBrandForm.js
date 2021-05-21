@@ -5,18 +5,18 @@ const CarBrandForm = ({ handleSubmit, handleChange, cancelPath }) => {
     <div>
       <h4>Enter a New Car Brand</h4>
       <form onClick={handleSubmit}>
-        <label>Title: </label>
-        <input placeholder="brand name" name="title" onChange={handleChange} />
-        <label>Origin: </label>
+        <label>Title:</label>
+        <input placeholder="Brand Name" name="title" onChange={handleChange} />
+        <label>Origin:</label>
         <input
           placeholder="Country of Origin"
-          name="brand origin"
+          name="country_of_origin"
           onChange={handleChange}
         />
-        <label>Website: </label>
+        <label>Website:</label>
         <input
           placeholder="http://carlink.com"
-          name="website"
+          name="website_link"
           onChange={handleChange}
         />
         <NavLink to={cancelPath}>
