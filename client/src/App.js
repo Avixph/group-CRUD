@@ -19,13 +19,14 @@ function App() {
         path="/add-car-brand-or-model"
         component={CarBrandOrModelCreate}
       />
+
+      <Route exact path="/car-brands/:id/car-models" component={CarBrand} />
+      <Route exact path="/car-brands/:id/car-models/:id" component={CarModel} />
       <Route
         exact
         path="/car-brands/:id/edit-car-brand"
         component={CarBrandEdit}
       />
-      <Route exact path="/car-brands/:id/car-models" component={CarBrand} />
-      <Route exact path="/car-brands/:id/car-models/:id" component={CarModel} />
       <Route
         exact
         path="/car-brands/:id/car-models/:id/edit-car-model"

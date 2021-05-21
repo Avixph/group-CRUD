@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
-import { carBrandUrl, carModelUrl, getModels } from "../../services/api-helper";
+import { carBrandUrl, getModels } from "../../services/api-helper";
 
 const CarBrand = (props) => {
   console.log(props);
@@ -49,7 +49,7 @@ const CarBrand = (props) => {
       )}
     </ul>
   ));
-
+  console.log(oneBrand._id);
   return (
     <Layout>
       <h4>{oneBrand.title}</h4>
