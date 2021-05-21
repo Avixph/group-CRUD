@@ -1,4 +1,6 @@
+import Layout from "../../shared/Layout";
+
 const CarModelEdit = () => {
-  return <div></div>;
+  return <Layout></Layout>;
 };
 export default CarModelEdit;
