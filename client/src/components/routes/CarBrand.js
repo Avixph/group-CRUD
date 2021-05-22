@@ -55,10 +55,10 @@ const CarBrand = (props) => {
 
   return (
     <Layout>
-      <h4>{oneBrand.title}</h4>
-      <h5>
+      <h3>{oneBrand.title}</h3>
+      <h4>
         Country of Origin: <br /> {oneBrand.country_of_origin}
-      </h5>
+      </h4>
       <a href={oneBrand.website_link} target="_blank" rel="noreferrer">
         <button>Website</button>
       </a>

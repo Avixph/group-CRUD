@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Layout from "../../shared/Layout";
 import CarBrandForm from "../../shared/form/CarBrandForm";
-import { carBrandUrl, getModels } from "../../../services/api-helper";
+import { carBrandUrl } from "../../../services/api-helper";
 
 const CarBrandEdit = (props) => {
   const brandId = props.match.params.id;
@@ -46,7 +46,7 @@ const CarBrandEdit = (props) => {
 
   return (
     <Layout>
-      <h4>Enter a New Car Brand</h4>
+      <h3>Edit Car Brand</h3>
       <CarBrandForm
         handleSubmit={handleSubmit}
         handleChange={handleChange}

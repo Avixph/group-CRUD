@@ -46,10 +46,10 @@ const CarModel = (props) => {
 
   return (
     <Layout>
-      <h4>{oneModel.model_name}</h4>
-      <h5>
+      <h3>{oneModel.model_name}</h3>
+      <h4>
         Car Type: <br /> {oneModel.car_type}
-      </h5>
+      </h4>
       <img
         src={oneModel.car_image ? oneModel.car_image : null}
         alt=""
