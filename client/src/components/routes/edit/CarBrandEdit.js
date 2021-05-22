@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
 import axios from "axios";
 import Layout from "../../shared/Layout";
 import CarBrandForm from "../../shared/form/CarBrandForm";
