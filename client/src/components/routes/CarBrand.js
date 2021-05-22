@@ -22,6 +22,7 @@ const CarBrand = (props) => {
 
   useEffect(() => {
     fetchBrand();
+    console.log("B");
   }, []);
 
   const fetchModelsbyBrand = async () => {
