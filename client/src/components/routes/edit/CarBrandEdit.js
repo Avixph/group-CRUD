@@ -7,31 +7,35 @@ import { carBrandUrl, getModels } from "../../../services/api-helper";
 
 const CarBrandEdit = (props) => {
   const brandId = props.match.params.id;
-  console.log(brandId);
+  // console.log(brandId);
   const [brand, setBrand] = useState({
     title: "",
     country_of_origin: "",
     website_link: "",
   });
-  console.log(brand);
+  // console.log(brand);
   const [updated, setUpdated] = useState(false);
 
   const fetchUpdate = async () => {
-    try {
-      const response = await axios
-        .get(`${carBrandUrl}/${brandId}`)
-        .then(({ data }) => {
-          return data;
-        });
-      console.log(response.brand);
-      setBrand(response.brand);
-    } catch (error) {
-      console.error(error);
-    }
+    // try {
+    //   const response = await axios
+    //     .get(`${carBrandUrl}/${brandId}`)
+    //     .then(({ data }) => {
+    //       return data;
+    //     });
+    //   // console.log(response.brand);
+    //   setBrand(response.brand);
+    // } catch (error) {
+    //   console.error(error);
+    // }
+    const response = await axios.get(`${carBrandUrl}/${brandId}`);
+    setBrand(response.data.brand);
   };
   useEffect(() => {
     fetchUpdate();
   }, []);
+
+  console.log(brand);
 
   const handleChange = (event) => {
     const updatedField = { [event.target.name]: event.target.value };
@@ -40,6 +44,7 @@ const CarBrandEdit = (props) => {
     setBrand(editedBrand);
   };
 
+  // const handleSubmit = () => {};
   const handleSubmit = (event) => {
     event.preventDefault();
     axios({
@@ -47,19 +52,23 @@ const CarBrandEdit = (props) => {
       method: "POST",
       data: brand,
     })
-      .then((res) => console.log(res), setUpdated(true))
+      .then(() => setUpdated(true))
       .catch(console.error);
   };
 
-  // if (updated) {
-  //   return <Redirect to={`/car-brands/${brandId}/edit-car-brand`} />;
-  // }
+  console.log(updated);
+
+  useEffect(() => {
+    if (updated) {
+      return <Redirect to={`/car-brands/${brandId}/edit-car-brand`} />;
+    }
+  }, [updated]);
 
   return (
     <Layout>
       <CarBrandForm
         handleSubmit={handleSubmit}
-        handlechange={handleChange}
+        handleChange={handleChange}
         cancelPath={`/car-brands/${brandId}/car-models`}
       />
     </Layout>

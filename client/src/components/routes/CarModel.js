@@ -5,7 +5,7 @@ import Layout from "../shared/Layout";
 import { carModelUrl } from "../../services/api-helper";
 
 const CarModel = (props) => {
-  console.log(props);
+  // console.log(props);
   const modelId = props.match.params.id;
   const [oneModel, setOneModel] = useState({});
   const [deletedModel, setDeletedModel] = useState(false);
@@ -16,7 +16,7 @@ const CarModel = (props) => {
       .then(({ data }) => {
         return data;
       });
-    console.log(response.car);
+    // console.log(response.car);
     setOneModel(response.car);
   };
 
