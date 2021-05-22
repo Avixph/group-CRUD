@@ -5,7 +5,7 @@ import Layout from "../shared/Layout";
 import { carBrandUrl, getModels } from "../../services/api-helper";
 
 const CarBrand = (props) => {
-  console.log(props);
+  // console.log(props);
   const brandId = props.match.params.id;
   const [oneBrand, setOneBrand] = useState({});
   const [brandModels, setBrandModels] = useState([]);
@@ -16,7 +16,7 @@ const CarBrand = (props) => {
       .then(({ data }) => {
         return data;
       });
-    console.log(response.brand);
+    // console.log(response.brand);
     setOneBrand(response.brand);
   };
 
@@ -26,7 +26,7 @@ const CarBrand = (props) => {
 
   const fetchModelsbyBrand = async () => {
     const data = await getModels();
-    console.log(data.cars);
+    // console.log(data.cars);
     setBrandModels(data.cars);
   };
 
@@ -35,9 +35,9 @@ const CarBrand = (props) => {
   }, []);
 
   const showCars = brandModels.map((brandModel) => (
-    <ul>
-      {brandModel.car_brand == brandId ? (
-        <li key={brandModel._id}>
+    <ul key={brandModel._id}>
+      {brandModel.car_brand === brandId ? (
+        <li>
           <NavLink
             to={`/car-brands/${oneBrand._id}/car-models/${brandModel._id}`}
           >
@@ -49,7 +49,9 @@ const CarBrand = (props) => {
       )}
     </ul>
   ));
-  console.log(oneBrand._id);
+
+  // console.log(oneBrand._id);
+
   return (
     <Layout>
       <h4>{oneBrand.title}</h4>

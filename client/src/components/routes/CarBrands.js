@@ -8,7 +8,7 @@ const CarBrands = () => {
 
   const fetchBrands = async () => {
     const data = await getBrands();
-    console.log(data.brands);
+    // console.log(data.brands);
     setBrands(data.brands);
   };
 
