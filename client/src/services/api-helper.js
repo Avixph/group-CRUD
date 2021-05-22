@@ -7,7 +7,7 @@ export const getBrands = async () => {
   const response = await axios.get(carBrandUrl).then(({ data }) => {
     return data;
   });
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
@@ -15,6 +15,6 @@ export const getModels = async () => {
   const response = await axios.get(carModelUrl).then(({ data }) => {
     return data;
   });
-  console.log(response);
+  // console.log(response);
   return response;
 };

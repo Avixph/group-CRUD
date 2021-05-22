@@ -3,7 +3,7 @@ import Layout from "../shared/Layout";
 const Home = () => {
   return (
     <Layout>
-      <h4>welcome to the Car CRUD</h4>
+      <h3>welcome to the Car CRUD</h3>
     </Layout>
   );
 };
